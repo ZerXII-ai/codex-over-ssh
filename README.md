@@ -21,6 +21,12 @@ Gaia Remote Execution is a small Codex MCP project for running commands on expli
 
 See the [plugin README](gaia-ssh-plugin/README.md) for installation, configuration, and usage instructions.
 
+## Usage example
+
+![An anonymized example of listing a connection and running a command](docs/images/gaia-ssh-example.png)
+
+This illustration is laid out from an actual MCP call against an isolated local mock SSH server; it is not a screenshot of the Codex interface. See the [Chinese walkthrough](docs/usage-example.zh-CN.md) for configuration and commands.
+
 ## Security
 
 `gaia.run_command` executes arbitrary shell text on the selected remote host. Use it only with SSH accounts and targets you trust, and review every command before running it. Passwords are stored as plaintext in the local credential file at `~/.config/gaia-ssh/connections.json`; that file must remain private and must never be committed. The included connection file is an example with placeholder values only.

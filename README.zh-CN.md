@@ -36,14 +36,18 @@ npm run init-config
 
 ## 使用
 
-先调用 `gaia.list_connections` 查看可用的连接名称，再调用 `gaia.run_command`。例如：
+先调用 `gaia.list_connections` 查看可用的连接名称，再调用 `gaia.run_command`。例如，在名为 `demo-server` 的连接上输出一行演示文字：
 
 ```json
 {
-  "connection": "gaia-dev",
-  "command": "hostname && uptime"
+  "connection": "demo-server",
+  "command": "printf 'Hello from demo-server\\n'"
 }
 ```
+
+![使用示例：列出连接并执行命令的脱敏演示图](docs/images/gaia-ssh-example.png)
+
+上图根据隔离的本地模拟 SSH 服务上的实际 MCP 调用结果排版，并非 Codex 界面截图；连接名和输出均为演示数据。[查看完整使用范例](docs/usage-example.zh-CN.md)。
 
 `connection` 和 `command` 必填。可选参数 `timeout_seconds` 默认是 300 秒，范围为 1–3600 秒；`max_output_bytes` 默认每个输出流保留 8192 字节，最大为 65536 字节。输出保留末尾内容；如果前面的内容被截断，结果会明确标记。命令超时后，不能通过此工具恢复该次执行。
 
