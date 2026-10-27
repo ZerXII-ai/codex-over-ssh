@@ -1,5 +1,7 @@
 # Gaia SSH
 
+[简体中文说明](../README.zh-CN.md)
+
 Gaia SSH provides two Codex MCP tools for explicitly named SSH targets:
 
 - `gaia.list_connections` lists target metadata without credentials.

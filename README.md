@@ -1,5 +1,7 @@
 # Gaia Remote Execution
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 Gaia Remote Execution is a small Codex MCP project for running commands on explicitly named SSH targets. The repository includes the `gaia-ssh` plugin and the design notes behind its connection and command model.
 
 ## What it does
