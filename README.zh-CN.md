@@ -36,18 +36,40 @@ npm run init-config
 
 ## 使用
 
-先调用 `gaia.list_connections` 查看可用的连接名称，再调用 `gaia.run_command`。例如，在名为 `demo-server` 的连接上输出一行演示文字：
+先调用 `gaia.list_connections` 查看可用的连接名称，再指定要操作的连接。以下两条是用户在 Codex 对话中发起的请求；`gaia-dev` 是示例连接名，使用时请替换为自己的连接名。
+
+### 范例一：查看远程系统信息
+
+在对话中输入：
+
+```text
+用 gaia-dev 跑一下 uname -a
+```
+
+对应的 `gaia.run_command` 参数示例：
 
 ```json
 {
-  "connection": "demo-server",
-  "command": "printf 'Hello from demo-server\\n'"
+  "connection": "gaia-dev",
+  "command": "uname -a"
 }
 ```
 
-![使用示例：列出连接并执行命令的脱敏演示图](docs/images/gaia-ssh-example.png)
+截图中命令执行成功（退出码 `0`）；主机名、时间和构建信息已遮盖。
 
-上图根据隔离的本地模拟 SSH 服务上的实际 MCP 调用结果排版，并非 Codex 界面截图；连接名和输出均为演示数据。[查看完整使用范例](docs/usage-example.zh-CN.md)。
+![脱敏截图：在 gaia-dev 上执行 uname -a](docs/images/example-uname-redacted.png)
+
+### 范例二：请求安装截图软件
+
+也可以用自然语言描述任务：
+
+```text
+在 gaia-dev 安装一个截图软件
+```
+
+![脱敏截图：请求在 gaia-dev 安装截图软件](docs/images/example-install-redacted.png)
+
+第二张截图只展示请求，未展示软件选择或安装结果。具体安装方式取决于目标系统和选定软件。[查看完整使用范例](docs/usage-example.zh-CN.md)。
 
 `connection` 和 `command` 必填。可选参数 `timeout_seconds` 默认是 300 秒，范围为 1–3600 秒；`max_output_bytes` 默认每个输出流保留 8192 字节，最大为 65536 字节。输出保留末尾内容；如果前面的内容被截断，结果会明确标记。命令超时后，不能通过此工具恢复该次执行。
 

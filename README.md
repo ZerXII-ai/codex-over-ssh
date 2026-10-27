@@ -21,11 +21,17 @@ Gaia Remote Execution is a small Codex MCP project for running commands on expli
 
 See the [plugin README](gaia-ssh-plugin/README.md) for installation, configuration, and usage instructions.
 
-## Usage example
+## Usage examples
 
-![An anonymized example of listing a connection and running a command](docs/images/gaia-ssh-example.png)
+Ask Codex to run `uname -a` on the named `gaia-dev` connection:
 
-This illustration is laid out from an actual MCP call against an isolated local mock SSH server; it is not a screenshot of the Codex interface. See the [Chinese walkthrough](docs/usage-example.zh-CN.md) for configuration and commands.
+![Redacted screenshot of a successful uname command](docs/images/example-uname-redacted.png)
+
+You can also request a remote task in natural language, such as installing a screenshot application:
+
+![Redacted screenshot of a request to install a screenshot application](docs/images/example-install-redacted.png)
+
+These screenshots are cropped and redacted. The first shows a successful command; the second shows the request only and does not establish an installation result. See the [Chinese walkthrough](docs/usage-example.zh-CN.md) for details.
 
 ## Security
 
