@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "gaia-ssh": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/server/index.js"],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

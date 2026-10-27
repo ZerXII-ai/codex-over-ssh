@@ -1,0 +1,18 @@
+{
+  "connections": {
+    "gaia-dev": {
+      "host": "192.0.2.10",
+      "port": 22,
+      "user": "alice",
+      "auth": { "type": "password", "password": "replace-with-password" },
+      "hostKey": "SHA256:replace-with-the-server-fingerprint"
+    },
+    "gaia-key": {
+      "host": "gaia.example.internal",
+      "port": 22,
+      "user": "alice",
+      "auth": { "type": "privateKey", "privateKeyPath": "/Users/alice/.ssh/id_ed25519" },
+      "hostKey": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIreplaceWithTheServerPublicKey"
+    }
+  }
+}

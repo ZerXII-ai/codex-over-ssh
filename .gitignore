@@ -1,0 +1,18 @@
+# Node dependencies and local build output
+**/node_modules/
+**/npm-debug.log*
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+**/connections.json
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.ppk
+
+# Operating system files
+.DS_Store
+Thumbs.db

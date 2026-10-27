@@ -1,0 +1,17 @@
+{
+  "name": "gaia-ssh",
+  "version": "0.1.0",
+  "description": "Execute commands on named Gaia SSH targets from Codex.",
+  "author": { "name": "ZerXII-ai" },
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Gaia SSH",
+    "shortDescription": "Run commands on named SSH targets.",
+    "longDescription": "Provides Codex tools to list configured Gaia SSH targets and run commands with strict host-key verification.",
+    "developerName": "ZerXII-ai",
+    "category": "Productivity",
+    "capabilities": ["Interactive"],
+    "defaultPrompt": ["List my configured Gaia SSH targets.", "Run a diagnostic command on a named Gaia target."]
+  }
+}
