@@ -4,6 +4,8 @@
   "description": "Execute commands on named Gaia SSH targets from Codex.",
   "author": { "name": "ZerXII-ai" },
   "license": "MIT",
+  "homepage": "https://github.com/ZerXII-ai/codex-over-ssh",
+  "repository": "https://github.com/ZerXII-ai/codex-over-ssh",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Gaia SSH",
